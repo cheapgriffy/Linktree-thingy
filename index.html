@@ -15,10 +15,10 @@
 
     <section class="w-[100%] h-[100%] absolute">
 
-        <!-- Header container -->
+        <!-- Header -->
         <div class=" w-[device-width] h-80 p-10 z-10">
 
-            <!-- header_container -->
+            <!-- header container -->
             <div class="z-10 flex flex-col justify-between items-center  h-[100%] gap-5">
 
                 <!-- discord profile picture-->
@@ -27,27 +27,46 @@
                     alt="">
 
                 <!-- pmd text box container -->
-                <div class="shadow-xl text-2xl px-5 py-2 z-10 object-cover h-[106px] w-[390px] bg-[url(/assets/media/PmdTextBox.png)] bg-contain flex flex-col ">
+                <div
+                    class="shadow-xl text-2xl px-5 py-2 z-10 object-cover h-[106px] w-[390px] bg-[url(/assets/media/PmdTextBox.png)] bg-contain flex flex-col ">
 
                     <!-- first line -->
                     <div class="flex flex-row gap-1">
                         <p class="text-yellow-300 text-shadow-lg">CheapGriffy :</p>
                         <p class="text-white text-shadow-lg">Hello there ! welcome to my link</p>
                     </div>
-                        <p class="relative bottom-2 text-white text-shadow-lg"> tree type of shit :D</p>
+                    <p class="relative bottom-2 text-white text-shadow-lg"> tree type of shit :D</p>
                 </div>
+
             </div>
         </div>
 
-        <!-- bakcground video -->
+        <!-- button part -->
+        <section class=" relative z-10 h-[400px] flex flex-col items-center gap-3 p-5">
+
+            <!-- button Element -->
+            <a href="https://www.reddit.com/user/CheapGriffy/">
+            <div class="w-[390px] flex flex-col">
+                <div class="generic_button">
+                    <img class="object-contain h-7 relative right-35" src="assets/media/icon/reddit_pixel.png" alt="">
+                    <button class="relative right-3">Reddit</button>
+                </div>
+            </div>
+            </a>
+
+        </section>
 
     </section>
+
+
+
+    <!-- bakcground video -->
     <div class="absolute w-[100%] h-[100%] ">
 
         <!-- <video autoplay muted loop class="blur-[6px] object-cover w-[100%] h-[100%] autoplay"
             src="assets/media/background_reboot.mp4"></video> -->
         <span class="bg-black/50 absolute w-[100%] h-[100%] z-5"></span>
-        <img class="blur-[6px] object-cover w-[100%] h-[100%] "  src="assets/media/lake.gif" alt="">
+        <img class="blur-[6px] object-cover w-[100%] h-[100%] " src="assets/media/lake.gif" alt="">
     </div>
 </body>
 
