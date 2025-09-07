@@ -1,43 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>CheapGriffy's homepage</title>
-        <link rel="stylesheet" href="assets/style/style.css">
-        <link href="https://db.onlinewebfonts.com/c/e170ff6da3fffe05d58fe216212bad92?family=Wonder+Mail" rel="stylesheet"> 
-        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-        
-    </head>
 
-    <body class="font-[WonderMail]" font-bold>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CheapGriffy's homepage</title>
+    <link rel="stylesheet" href="assets/style/style.css">
+    <link href="https://db.onlinewebfonts.com/c/e170ff6da3fffe05d58fe216212bad92?family=Wonder+Mail" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-        <section class="w-[100%] h-[100%] absolute">
+</head>
 
-            <!-- Header container -->
-            <div class="bg-blue-300 w-[device-width] h-80 p-10 z-10">
+<body class="font-[WonderMail]" font-bold>
 
-                <!-- header_container -->
-                <div class="flex flex-col justify-between items-center  h-[100%] gap-5">
+    <section class="w-[100%] h-[100%] absolute">
 
-                    <!-- discord profile picture-->
-                    <img class="rounded-[50%] h-[80%]" src="https://cdn.discordapp.com/avatars/584096691473350657/a_3e42397cee4ccf87c5018ff95367dc72.webp?size=96&amp;animated=true" alt="">
+        <!-- Header container -->
+        <div class=" w-[device-width] h-80 p-10 z-10">
 
-                    <!-- pmd text box container-->
-                    <div class="object-cover h-[55px]">
-                        <!-- text container-->
+            <!-- header_container -->
+            <div class="z-10 flex flex-col justify-between items-center  h-[100%] gap-5">
+
+                <!-- discord profile picture-->
+                <img class="z-10 rounded-[50%] h-[70%]"
+                    src="https://cdn.discordapp.com/avatars/584096691473350657/a_3e42397cee4ccf87c5018ff95367dc72.webp?size=96&amp;animated=true"
+                    alt="">
+
+                <!-- pmd text box container-->
+                <div class="shadow-xl text-2xl px-5 py-2 z-10 object-cover h-[106px] w-[390px] bg-[url(/assets/media/PmdTextBox.png)] bg-contain flex flex-col ">
+
+                    <!-- first line -->
+                    <div class="flex flex-row gap-1">
+                        <p class="text-yellow-300 text-shadow-lg">CheapGriffy :</p>
+                        <p class="text-white text-shadow-lg">Hello there ! welcome to my link</p>
                     </div>
+                        <p class="relative bottom-2 text-white text-shadow-lg"> tree type of shit :D</p>
                 </div>
             </div>
- 
-            <!-- bakcground video -->
-            <div class="absolute w-[100%] h-[100%] bg-wheat">
-                <video autoplay muted loop class="object-cover w-[100%] h-[100%] autoplay" src="assets/media/background_reboot.mp4"></video>
-            </div>
-        </section>
-
-
-
         </div>
-    </body>
+
+        <!-- bakcground video -->
+
+    </section>
+    <div class="absolute w-[100%] h-[100%] ">
+
+        <!-- <video autoplay muted loop class="blur-[6px] object-cover w-[100%] h-[100%] autoplay"
+            src="assets/media/background_reboot.mp4"></video> -->
+        <span class="bg-black/50 absolute w-[100%] h-[100%] z-5"></span>
+        <img class="blur-[6px] object-cover w-[100%] h-[100%] "  src="assets/media/lake.gif" alt="">
+    </div>
+</body>
+
 </html>
