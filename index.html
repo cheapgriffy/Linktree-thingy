@@ -13,13 +13,13 @@
 
 <body class="font-[WonderMail]" font-bold>
 
-    <section class="w-[100%] h-[100%] absolute">
+    <section class="w-screen h-screen absolute">
 
         <!-- Header -->
-        <div class=" w-[device-width] h-80 p-3 z-10">
+        <div class=" w-device h-80 p-3 z-10">
 
             <!-- header container -->
-            <div class="z-10 flex flex-col justify-between items-center  h-[100%] gap-5">
+            <div class="z-10 flex flex-col justify-between items-center h-[100%] gap-5 ">
 
                 <!-- discord profile picture container-->
                 <!-- In case : https://cdn.discordapp.com/avatars/584096691473350657/a_3e42397cee4ccf87c5018ff95367dc72.webp?size=96&amp;animated=true -->
@@ -85,7 +85,7 @@
             </a>
 
             <!-- button Element -->
-            <a href="@cheapgriffy.bsky.social">
+            <a href="https://bsky.app/profile/cheapgriffy.bsky.social">
                 <div class="w-[390px] flex flex-col">
                     <div class="generic_button">
                         <img class="object-contain h-8 relative right-34" src="assets/media/icon/bluesky_pixel.png"
@@ -146,12 +146,12 @@
 
 
     <!-- bakcground video -->
-    <div class="absolute w-full h-full scale-110">
+    <div class="absolute w-screen h-screen scale-110 flex justify-center items-center">
+        <span class="bg-black/50 absolute w-screen h-screen z-5"></span>
         
         <!-- <video autoplay muted loop class="blur-[6px] object-cover w-[100%] h-[100%] autoplay"
             src="assets/media/background_reboot.mp4"></video> -->
-        <span class="bg-black/50 absolute w-full h-full z-5 max-sm:w-[device-width] max-sm:h-[120%]"></span>
-        <img class="blur-[6px] object-cover w-full h-full transition-all duration-300 ease-in-out max-sm:w-[120%] max-sm:h-[120%]" src="assets/media/lake.gif" alt="">
+        <img class="blur-[6px] object-cover w-screen h-screen" src="assets/media/lake.gif" alt="">
 
     </div>
 </body>
