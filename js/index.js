@@ -30,7 +30,7 @@ PP_CONTAINER.addEventListener("click", () =>
  * give random number between two inputs, values will be normalised, so dont use two close floats.
  * @param {Minimum value} min 
  * @param {maximum value} max 
- * @returns a int between the two values 
+ * @returns a random int between the two values 
  */
 function getRandomInt(min, max)
 {
