@@ -13,29 +13,41 @@ let textBoxPhrases = [
     "I listen to a lot of games ost, check my playlist's",
     "I will respond on both Discord or Telegram, if I'm not overwhelmed '^^",
     "I got my shy periods... so dont take my absence as a offense",
-    "There's cracked photoshop links at :",
-    "https://files.cheapgriffy.fr/files/shr/Partage_de_mes_crakcs_adobe",
     "I swear I was forced to wear that JingleBell collar ;-;",
     "W-why are you taking so long on that page... I feel nervous ><",
 ]
 
 // pat pat hover
 PP_CONTAINER.addEventListener("mouseover", () => {
-    PATPAT_GIF.classList.remove("opacity-0")
+    PATPAT_GIF.style.opacity = "1"
 })
 PP_CONTAINER.addEventListener("mouseout", () => {
-    PATPAT_GIF.classList.add("opacity-0")
+    PATPAT_GIF.style.opacity = "0"
 })
 
 // pat pat click check
 PP_CONTAINER.addEventListener("click", () => {
-    PATPAT_GIF.classList.add("scale-70")
-    console.log("test"),
-
-        setTimeout(() => {
-            PATPAT_GIF.classList.remove("scale-70")
+    PATPAT_GIF.style.scale = "0.8"
+    PATPAT_GIF.setAttribute("src", "assets/media/petpet-transparent.gif")
+    switch (getRandomInt(0, 2)) {
+        case 0:
+            new Audio("assets/media/sounds/patpat-sound-1.mp3").play()
+            console.log("test")
+            break;
+        case 1:
+            new Audio("assets/media/sounds/patpat-sound-2.mp3").play()
+            break;
+        case 2:
+            new Audio("assets/media/sounds/patpat-sound-3.mp3").play()
+            break;
         }
-            , 150)
+
+    patpat_unlockable(1)
+
+    setTimeout(() => {
+        PATPAT_GIF.style.scale = "1"
+        PATPAT_GIF.setAttribute("src", "assets/media/petpet-transparent-static.gif")
+    }, 600)
 }
 )
 
@@ -50,6 +62,21 @@ function getRandomInt(min, max) {
     max = Math.floor(max);
 
     return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+/**
+ * check if the patpat counter reach a certain value to unlock easter eggs
+ * @param {input of the patpat counter} input 
+ */
+function patpat_unlockable(input) {
+    let patpatcount = localStorage.getItem("patpatcount") || 0;
+    patpatcount = parseInt(patpatcount) + input;
+    localStorage.setItem("patpatcount", patpatcount);
+
+    if (patpatcount >= 10 && !localStorage.getItem("unlocked-easter-egg-index") <= "1") {
+        textBoxPhrases.push("There's cracked photoshop links at :", "https://files.cheapgriffy.fr/files/shr/Partage_de_mes_crakcs_adobe",)
+        localStorage.setItem("unlocked-easter-egg-index", "1");
+    }
 }
 
 /**
