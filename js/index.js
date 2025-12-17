@@ -13,7 +13,8 @@ let textBoxPhrases = [
     "I listen to a lot of games ost, check my playlist's",
     "I will respond on both Discord or Telegram, if I'm not overwhelmed '^^",
     "I got my shy periods... so dont take my absence as a offense",
-    "There's cracked photoshop links at https://cheapgriffy.fr/Adobe_bordel/",
+    "There's cracked photoshop links at :",
+    "https://files.cheapgriffy.fr/files/shr/Partage_de_mes_crakcs_adobe",
     "I swear I was forced to wear that JingleBell collar ;-;",
     "W-why are you taking so long on that page... I feel nervous ><",
 ]
