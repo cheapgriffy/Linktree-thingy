@@ -73,9 +73,10 @@ function patpat_unlockable(input) {
     patpatcount = parseInt(patpatcount) + input;
     localStorage.setItem("patpatcount", patpatcount);
 
-    if (patpatcount >= 10 && !localStorage.getItem("unlocked-easter-egg-index") <= "1") {
+    // manage adobe link unlock and saves its
+    if (patpatcount >= 10 && !localStorage.getItem("unlocked-adobe-link") !== "true") {
         textBoxPhrases.push("There's cracked photoshop links at :", "https://files.cheapgriffy.fr/files/shr/Partage_de_mes_crakcs_adobe",)
-        localStorage.setItem("unlocked-easter-egg-index", "1");
+        localStorage.setItem("unlocked-adobe-link", "true");
     }
 }
 
@@ -134,5 +135,46 @@ async function writeLoop(sleepTime, phrases, text) {
     }
 };
 
+
+async function fetchWithTimeout(url, options = {}) {
+  // default value or option
+  const { timeout = 5000 } = options;
+
+  const controller = new AbortController();
+  const signal = controller.signal;
+
+  // exe after timeout ms, need to be cleaned
+  const timer = setTimeout(() => {
+    controller.abort();
+  }, timeout);
+
+  try {
+    // signal to close  any fetch request after timeout
+    const response = await fetch(url, {
+      ...options,
+      signal: signal
+    });
+
+    //stops timeout waits basically
+    clearTimeout(timer);
+    return response;
+
+  } catch (error) {
+    //stops timeout waits basically
+    clearTimeout(timer);
+
+    // check for timeout
+    if (error.name === 'AbortError') {
+      console.warn("🚫 La requête a expiré (Timeout)");
+      textBoxPhrases.splice(1, 0, `Bahahaha ${url} is downl lol`);
+    }
+
+    // prevent script crash if errors
+    throw error;
+  }
+}
+
+// I know ur looking lightshoro, I though it would be funny, please dont take it as a offense >~<
+fetchWithTimeout("https://protogen.fr", { timeout: 3000 })
 writeLoop(35, textBoxPhrases, textBoxElement)
 backgroundChoice()
