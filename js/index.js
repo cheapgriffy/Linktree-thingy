@@ -166,7 +166,7 @@ async function fetchWithTimeout(url, options = {}) {
     // check for timeout
     if (error.name === 'AbortError') {
       console.warn("🚫 La requête a expiré (Timeout)");
-      textBoxPhrases.splice(1, 0, `Bahahaha ${url} is downl lol`);
+      textBoxPhrases.splice(1, 0, `Bahahaha ${url} is down lol, no more kikiskotheque`);
     }
 
     // prevent script crash if errors
