@@ -2,18 +2,23 @@
 
 @font-face {
     font-family: "WonderMail";
-    src: url("https://db.onlinewebfonts.com/t/e170ff6da3fffe05d58fe216212bad92.eot");
-    src: url("https://db.onlinewebfonts.com/t/e170ff6da3fffe05d58fe216212bad92.eot?#iefix")format("embedded-opentype"),
-    url("https://db.onlinewebfonts.com/t/e170ff6da3fffe05d58fe216212bad92.woff2")format("woff2"),
-    url("https://db.onlinewebfonts.com/t/e170ff6da3fffe05d58fe216212bad92.woff")format("woff"),
-    url("https://db.onlinewebfonts.com/t/e170ff6da3fffe05d58fe216212bad92.ttf")format("truetype"),
-    url("https://db.onlinewebfonts.com/t/e170ff6da3fffe05d58fe216212bad92.svg#Wonder Mail")format("svg");
+    src: url("../media/fonts/wondermail.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
+body
+{
+    font-family: "WonderMail";
+    background-color: #121212;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
 
 .generic_button 
 {
-
    /* flex flex-row justify-center bg-[#1f1f1f] hover:bg-[#424242] hover: transition-all duration-200 ease-out text-3xl rounded-2xl h-[60px] text-white */
 
     height:  50px;
