@@ -1,15 +1,12 @@
-# A linktree hostable template
+# Linktree like static page template
 
-Basically just a small self made linktree page.
-nothing fnacy. just me testing what i can do with my bare mind.
+My take on a Social Link Index for my personal use.
+Feel free to edit or fork 
 
 ### Featuring
-- a fully customisable typewriter effect.
+- Javascript based Typewriter effect
 - Randomised background.
-- Easter egg system and funny quirck with the typewriter
-
+- Easter egg's
 
 # Screenshots
 <img src="https://files.cheapgriffy.fr/files/shr/Direct_Links/image.png-1768048258.366760-zWvzkcSL.png?raw" width="600">
-
-
