@@ -1,6 +1,7 @@
 const PP_CONTAINER = document.getElementById("profile_picture")
 const PATPAT_GIF = document.getElementById("patpat_transparent")
 const BACKGROUND_CONTAINER = document.getElementById("backgrounds")
+const ROOT_LINKS = document.getElementById("link-section")
 
 const textBoxElement = document.getElementById("typewriter")
 let textBoxPhrases = [
@@ -78,6 +79,11 @@ function patpat_unlockable(input) {
         textBoxPhrases.push("There's cracked photoshop links at :", "https://files.cheapgriffy.fr/files/shr/Partage_de_mes_crakcs_adobe",)
         localStorage.setItem("unlocked-adobe-link", "true");
     }
+
+    if (patpatcount >= 50 && !localStorage.getItem("secrets-links") !== "true") {
+        createLinkButton("BlueSky AD", "assets/media/icon/bluesky_pixel.png", "https://bsky.app/profile/cuddling-griffy.bsky.social")
+        localStorage.setItem("secrets-links", "true");
+    }
 }
 
 /**
@@ -93,6 +99,25 @@ function backgroundChoice() {
             element.remove()
         }
     });
+}
+
+
+/**
+ * 
+ * @param {string} name : displayed text
+ * @param {url string} icon_url : link to the icon
+ * @param {url string} link : redirect button link 
+ */
+function createLinkButton(name, icon_url, link){
+    ROOT_LINKS.innerHTML += `
+    <a href="${link}">
+        <div class="w-[390px] flex flex-col">
+            <div class="generic_button">
+                <img class="object-contain h-9 relative -translate-x-30" src="${icon_url}" alt="">
+                <button class="relative right-3">${name}</button>
+            </div>
+        </div>
+    </a>`
 }
 
 // https://www.youtube.com/watch?v=R846J8LJ6os Tutorial used
@@ -165,7 +190,7 @@ async function fetchWithTimeout(url, options = {}) {
 
     // check for timeout
     if (error.name === 'AbortError') {
-      console.warn("🚫 La requête a expiré (Timeout)");
+      console.warn("La requête a expiré (Timeout)");
       textBoxPhrases.splice(1, 0, `Bahahaha ${url} is down lol, no more kikiskotheque`);
     }
 
